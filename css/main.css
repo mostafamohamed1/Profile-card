@@ -81,7 +81,7 @@ img:not(:is(.card-bg)) {
 }
 
 .card-name {
-  --mb: 4rem;
+  --mb: 3.5rem;
   margin-block: var(--mb) 9px;
   font-size: var(--f-size);
   font-weight: 700;
@@ -122,6 +122,6 @@ img:not(:is(.card-bg)) {
 .card-follower {
   margin-top: 5px;
   font-size: 0.555rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: var(--clr-gray);
 }
