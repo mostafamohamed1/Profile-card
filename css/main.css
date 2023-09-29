@@ -1,0 +1,127 @@
+:root {
+  --clr-cyan: hsl(185, 75%, 39%);
+  --clr-desaturated: hsl(229, 23%, 23%);
+  --clr-gray: hsl(227, 10%, 46%);
+  --clr-dark-gray: hsl(0, 0%, 59%);
+
+  --f-size: 112.5%;
+  --f-family: "Kumbh Sans", sans-serif;
+}
+
+html {
+  font-size: var(--f-size);
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-cyan);
+
+  position: relative;
+
+  font-family: var(--f-family);
+  overflow: hidden;
+}
+
+.sr-only {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+img:not(:is(.card-bg)) {
+  max-width: 100%;
+  display: block;
+}
+
+.card-bg {
+  position: fixed;
+  z-index: -1;
+}
+
+.card-bg.top {
+  transform: translate(-50%, -40%);
+}
+
+.card-bg.bottom {
+  transform: translate(50%, 50%);
+}
+
+.card {
+  max-width: 19.44rem;
+  text-align: center;
+  border-radius: 16px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 50px 50px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-hero {
+  position: relative;
+}
+
+.card-img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+}
+
+.card-name {
+  --mb: 4rem;
+  margin-block: var(--mb) 9px;
+  font-size: var(--f-size);
+  font-weight: 700;
+  color: var(--clr-desaturated);
+}
+
+.card-name .age {
+  color: var(--clr-gray);
+  font-weight: 400;
+  margin-left: 9px;
+}
+
+.card-location {
+  color: var(--clr-gray);
+  font-size: 0.77rem;
+  margin-bottom: 1.44rem;
+}
+
+.card-activity {
+  padding: 1.38rem;
+  border-top: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-activity > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-number {
+  color: var(--clr-desaturated);
+  font-size: var(--f-size);
+  font-weight: 700;
+}
+
+.card-follower {
+  margin-top: 5px;
+  font-size: 0.555rem;
+  letter-spacing: 3px;
+  color: var(--clr-gray);
+}
